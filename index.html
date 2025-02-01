@@ -7,120 +7,28 @@
     <title>PanaCloud</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- <style>
-        .new li:hover {
-            color: #fd7200;
-        }
-
-        * {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .top {
-            background-color: #212121;
-            color: #ffffff;
-            height: 44px;
-
-        }
-
-        .img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-flow: column;
-            color: #fff;
-
-        }
-
-        .top,
-        .nvbr {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-inline: 33px;
-        }
-
-
-        .portUl {
-            display: flex;
-            padding: 8px;
-            align-items: center;
-            gap: 30px;
-            font-size: large;
-
-            :hover {
-                color: #fd7200;
-            }
-
-            list-style: none;
-            font-family: Arial,
-            Helvetica,
-            sans-serif;
-        }
-
-
-        button {
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 4px;
-        }
-
-        .call-me-back {
-            background-color: #a2d84c;
-            color: #000;
-            padding: 4px;
-        }
-
-        .read-more {
-            background-color: #fbbd08;
-            color: #000;
-            padding: 12px 20px;
-            margin-bottom: 20px;
-            width: 181px;
-
-        }
-
-        nav ul {
-            pointer-events: none;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: inherit;
-            cursor: default;
-        }
-    </style> -->
     <style>
+        /* Global Styles */
         * {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-    
-        .portUl li:hover {
-            color: #fd7200;
+
+        /* Navigation Bar */
+        nav ul {
+            pointer-events: auto;
         }
-        .new li:hover {
-font-weight: bold;
-border-bottom: 10px solid #fbbd08 ;
+
+        nav ul li a,
+        .new li a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
         }
-    
-        .top {
-            background-color: #212121;
-            color: #ffffff;
-            height: 44px;
-        }
-    
-        .top,
-        .nvbr {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-inline: 33px;
-        }
-    
+
+        /* List Styling */
         .portUl,
         .new {
             display: flex;
@@ -132,34 +40,96 @@ border-bottom: 10px solid #fbbd08 ;
             height: 70px;
             justify-content: center;
         }
-    .new li{
-        display: flex;
+
+        .new li {
+            display: flex;
             justify-content: center;
             align-items: center;
             height: 69px;
+        }
 
+        .portUl li:hover {
+            color: #fd7200;
+        }
 
-    }
-        nav ul {
-            pointer-events: auto;
+        .new li:hover {
+            font-weight: bold;
+            border-bottom: 10px solid #fbbd08;
         }
-    
-        nav ul li a {
-            text-decoration: none;
-            color: inherit;
-            cursor: pointer;
+
+        /* Icons */
+        .social-icon,
+        .phone-icon {
+            width: 25px;
+            height: 25px;
+            background-color: #fff;
+            border-radius: 50px;
         }
-    
-        .call-me-back {
-            background-color: #a2d84c;
-            color: #000;
-            padding: 4px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 4px;
+
+        /* Top Bar */
+        .top {
+            background-color: #212121;
+            color: #ffffff;
+            height: 44px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 33px;
         }
-    
+
+        /* Navbar */
+        .nvbr {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 33px;
+        }
+
+        /* Hero Section */
+        .img {
+            background: url(./bnr.jpg) center/cover no-repeat;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .img h1 {
+            font-size: 8vh;
+            margin-top: 140px;
+        }
+
+        .img p {
+            width: 750px;
+            text-align: center;
+            font-size: x-large;
+        }
+
+        /* About Section */
+        .ABOUT {
+            background: url(./bg.jpg) no-repeat center/cover;
+            box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5);
+            padding: 30px 55px;
+        }
+
+        .paras {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-block: 20px;
+        }
+
+        .paras p {
+            width: 90%;
+            /* Adjusts width to be responsive */
+            max-width: 500px;
+            /* Prevents it from being too wide on larger screens */
+        }
+
         .read-more {
             background-color: #fbbd08;
             color: #000;
@@ -171,65 +141,253 @@ border-bottom: 10px solid #fbbd08 ;
             font-size: 16px;
             border-radius: 4px;
         }
-    
-        .img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-flow: column;
-            color: #fff;
-            text-align: center;
+
+        /* Responsive Text */
+        .responsive-text {
+            display: none;
         }
-    
+
+        /* Menu Icon */
+        .menu-icon {
+            width: 100px;
+            height: 40px;
+        }
+
+        /* Section Lists */
         section ul {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 30px;
         }
-    
+
         section ul li {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1170px) {
+
+            .nvbr,
+            .top {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .new,
+            .contact-info {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-info {
+                display: none;
+            }
+
+            .nvbr {
+                flex-direction: column;
+                padding-inline: 15px;
+            }
+
+            .new {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .img h1 {
+                font-size: 6vh;
+            }
+
+            .img p {
+                width: 90%;
+                font-size: large;
+            }
+
+            section>div,
+            section ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section ul li {
+                margin-bottom: 20px;
+            }
+
+            .menu-icon {
+                width: 60px;
+                height: 30px;
+            }
+
+            .ADVANTAGES {
+                display: none;
+            }
+
+            .responsive-text {
+                display: block;
+                color: #bcbec0;
+            }
+        }
+
+        /*Grid*/
+        /* Reset default list styles */
+        .ser {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .ser li {
+            display: flex;
+            width: 260px;
+            height: 200px;
+            border-radius: 10px;
+            background: #f1f2f2;
             flex-flow: column;
             justify-content: center;
             align-items: center;
         }
+
+        .ser img {
+            margin-top: -100px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .ser div {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            gap: 8px;
+        }
+
+        .ser h6 {
+            font-size: medium;
+            margin-bottom: 0px;
+        }
+
+        .ser p {
+            width: 200px;
+            margin: 0px;
+            text-align: center;
+            font-size: small;
+            color: #bcbec0;
+        }
+
+        .ser a {
+            color: #4fdf16;
+            cursor: default;
+            pointer-events: none;
+            margin-top: 15px;
+        }
+
+        .resposive {
+            display: none;
+        }
+
+        /* Services Responsive Design */
+        @media (max-width: 1100px) {
+            .ser {
+                justify-content: space-evenly;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .ser {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Show only on small screens */
+        @media (max-width: 600px) {
+            .resposive {
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .footer {
+                max-width: 100%;
+                width: 100vw;
+                overflow-x: hidden;
+            }
+
+            .boarder {
+                border-right: none;
+            }
+        }
+
+        .four {
+            width: 60%;
+            max-width: 343px;
+            font-size: 14px;
+            margin: 0px;
+        }
     </style>
-    
 </head>
+
 
 <body style="display: flex; flex-flow: column; gap: 4px; margin: 0px;">
     <!-- top -->
-    <header class="top">
-        <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
-            <img src="./f.png" alt="social media icon" width="25px" height="25px"
-                style="background-color: #fff; border-radius: 50px;" />
-            <img src="./tw.png" alt="social media icon" width="25px" height="25px"
-                style="background-color: #fff; border-radius: 50px;" />
-            <img src="./g+.png" alt="social media icon" width="25px" height="25px"
-                style="background-color: #fff; border-radius: 50px;" />
-            <img src="./l.png" alt="social media icon" width="25px" height="25px"
-                style="background-color: #fff; border-radius: 50px;" />
-            <img src="./t.png" alt="social media icon" width="25px" height="25px"
-                style="background-color: #fff; border-radius: 50px;" />
+    <header style="background-color: #212121;
+        color: #ffffff;
+        height: 44px; display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-inline: 33px;" class="top">
+        <div style="    display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;" class="social-icons">
+            <img src="./f.png" alt="social media icon" class="social-icon" />
+            <img src="./tw.png" alt="social media icon" class="social-icon" />
+            <img src="./g+.png" alt="social media icon" class="social-icon" />
+            <img src="./l.png" alt="social media icon" class="social-icon" />
+            <img src="./t.png" alt="social media icon" class="social-icon" />
         </div>
-        <div style="display: flex; justify-content: center; align-items: center; gap: 20px; padding-block: 20px">
-            <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
-                <img src="./phone.png" alt="phone" width="25px" height="25px" />
+        <div style="  display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding-block: 20px;" class="contact-info">
+            <div style=" display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;" class="contact-item">
+                <img src="./phone.png" alt="phone" class="phone-icon" />
                 +92(304) 386-6719
             </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
-                <img src="./phone.png" alt="phone" width="25px" height="25px" />
+            <div style=" display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;" class="contact-item">
+                <img src="./phone.png" alt="phone" class="phone-icon" />
                 +92(317) 011-3001
             </div>
-            <button class="call-me-back">CALL ME BACK</button>
+            <button style="   background-color: #a2d84c;
+                color: #000;
+                padding: 8px;
+                padding-inline: 16px;
+                border: none;
+                cursor: pointer;
+                font-size: 12px;
+                border-radius: 4px;
+                font-weight: 600;" class="call-me-back">CALL ME BACK</button>
         </div>
-
     </header>
-    <!-- nvbr -->
-     
-<nav class="nvbr">
-        <img src="./pc.png" alt="logo" height="71px" width="140px">
+    <nav class="nvbr">
+        <img src="./pc.png" alt="logo" height="69px" width="140px">
         <ul class="new">
             <li><a href="#">WHY US</a></li>
             <li><a href="#">ABOUT</a></li>
@@ -241,21 +399,32 @@ border-bottom: 10px solid #fbbd08 ;
             <li><a href="#">CONTACT US</a></li>
         </ul>
     </nav>
-    <!-- main -->
-    <main class="img" style="background: url(./bnr.jpg); background-size: cover; height: 500px;">
-        <h1 style="font-size: 8vh; margin-top: 140px;">WE ARE EXPERTS </h1>
-        <p style="width: 750px; text-align: center; font-size: x-large;">Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy:zz eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
-        <button class="read-more">READ MORE</button>
-        <img src="./menu.png" alt="nav menu" width="100px" height="40x">
+    <main class="img">
+        <h1>WE ARE EXPERTS</h1>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat</p>
+        <button style=" background-color: #fbbd08;
+        color: #000;
+        padding: 12px 20px;
+        margin-bottom: 20px;
+        width: 181px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;" class="read-more">READ MORE</button>
+        <img src="./menu.png" alt="nav menu" class="menu-icon">
     </main>
     <!-- OUR ADVANTAGES -->
     <section
-        style="height: 455px; box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5); display: flex; flex-flow: column; justify-content: center; align-items: center;  ">
-        <h1 style="font-size: 8vh; margin-top: 30px;">OUR <span style="color: #668e19;">ADVANTAGES</span> </h1>
-        <p style="width: 550px; margin-top: 30px; text-align: center; font-size: medium; color: #bcbec0;">Lorem ipsum
+        style="height: max-content; padding-block: 40px; box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5); display: flex; flex-flow: column; justify-content: center; align-items: center;  ">
+        <h1 style="font-size: 8vh;">OUR <span style="color: #668e19;">ADVANTAGES</span> </h1>
+        <p class="ADVANTAGES"
+            style="width: 550px; margin-top: 30px; text-align: center; font-size: medium; color: #bcbec0;">Lorem ipsum
             dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde repudiandae
             illo erat.</p>
+        <p class="responsive-text" style="width: 250px; text-align: center; margin-block: 10px;">Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde repudiandae
+            illo erat</p>
         <div style="display: flex; margin-top: 20px; ">
             <li style="display: flex; flex-flow: column; justify-content: center; align-items: center;">
                 <img src="./4.jpg" alt="7" width="150px" height="150px">
@@ -290,79 +459,79 @@ border-bottom: 10px solid #fbbd08 ;
         </div>
     </section>
     <!-- ABOUT US -->
-    <section
-        style="height: 455px; background: url(./bg.jpg); box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5); background-size: cover; padding:30px;">
+    <section class="ABOUT" style="height: auto;">
         <h1 style="font-size: 6vh; margin: 0; display: flex; justify-content: center;">ABOUT <span
                 style="color: #668e19;">US</span> </h1>
         <div>
-            <div style="width: 500px;  ">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, porro consequuntur, recusandae dolore
-                    reiciendis soluta accusantium necessitatibus .</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Libero, reiciendis eveniet. Pariatur
-                    recusandae illo itaque a adipisci debitis aspernatur est ea harum porro assumenda quasi, it amet
-                    consectetur adipisicing elit. inventore accusantium repellat omnis elit elit. quaerat!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, reiciendis eveniet. Pariatur
+            <div class="paras">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, porro consequuntur, recusandae
+                    dolore reiciendis soluta accusantium necessitatibus.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, reiciendis eveniet. Pariatur
                     recusandae illo itaque a adipisci debitis aspernatur est ea harum porro assumenda quasi, inventore
                     accusantium repellat omnis quaerat!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum! Consequatur corporis exercitationem
-                    labore repellat voluptatum sit culpa, magnam quo minima eum!</p>
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, reiciendis eveniet. Pariatur
+                    recusandae illo itaque a adipisci debitis aspernatur est ea harum porro assumenda quasi, inventore
+                    accusantium repellat omnis quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consequatur corporis exercitationem labore repellat voluptatum sit culpa, magnam quo minima eum!
+                </p>
                 <button class="read-more">READ MORE</button>
             </div>
         </div>
-
     </section>
     <!-- OUR SERVICES  -->
     <section
-        style="height: 440px; box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5); display: flex; flex-flow: column; justify-content: center; align-items: center;  ">
-        <h1 style="font-size: 6vh; margin: 0;">OUR <span style="color: #668e19;">SERVICES</span> </h1>
-        <p style="width: 550px; margin-bottom: 50px;  text-align: center; font-size: medium; color: #bcbec0;">Lorem
+        style="height: max-content; padding-block: 30px; box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5); display: flex; flex-flow: column; justify-content: center; align-items: center;  ">
+        <h1 style="font-size: 6vh;  margin: 0;">OUR <span style="color: #668e19;">SERVICES</span> </h1>
+        <p class="ADVANTAGES"
+            style="width: 550px; margin-bottom: 50px;  text-align: center; font-size: medium; color: #bcbec0;">Lorem
             ipsum dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde
             repudiandae illo erat.</p>
-        <ul style="display: flex; gap: 16px;">
-            <li
-                style="display: flex; width: 260px; height: 200px; border-radius: 10px; background: #f1f2f2; flex-flow: column; justify-content: center; align-items: center; ">
-                <img src="./star.png" alt="star" width="70px" height="70px" style="margin-top: -100px;">
-                <div style="display: flex; flex-flow: column; justify-content: center; align-items: center; gap: 8px;">
-                    <h6 style=" font-size: medium; margin-bottom: 0px;">WEB DESIGN</h6>
-                    <p style="width: 200px; margin: 0px; text-align: center; font-size: small; color: #bcbec0;">Lorem
-                        ipsum dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore .</p>
-                    <a href="#" style="color: #4fdf16;cursor: default;pointer-events: none;">read&nbsp;more</a>
+        <p class="responsive-text" style="width: 250px; text-align: center; margin-top: 10px; margin-bottom: 90px;">
+            Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde repudiandae
+            illo erat</p>
+        <ul class="ser">
+            <li>
+                <img src="./star.png" alt="star">
+                <div>
+                    <h6>WEB DESIGN</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore.</p>
                 </div>
+                <a href="#">read&nbsp;more</a>
             </li>
-            <li
-                style="display: flex; border-radius: 10px; width: 260px; height: 200px;background: #f1f2f2; flex-flow: column; justify-content: center; align-items: center; ">
-                <img src="./star.png" alt="star" width="70px" height="70px" style="margin-top: -100px;">
-                <div style="display: flex; flex-flow: column; justify-content: center; align-items: center; gap: 8px;">
-                    <h6 style=" font-size: medium; margin-bottom: 0px;">GRAPHIC DESIGN</h6>
-                    <p style="width: 200px; margin: 0px; text-align: center; font-size: small; color: #bcbec0;">Lorem
-                        ipsum dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore .</p>
-                    <a href="#" style="color: #4fdf16;cursor: default;pointer-events: none;">read&nbsp;more</a>
+            <li>
+                <img src="./star.png" alt="star">
+                <div>
+                    <h6>GRAPHIC DESIGN</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore.</p>
                 </div>
+                <a href="#">read&nbsp;more</a>
             </li>
-            <li
-                style="display: flex; width: 260px; border-radius: 10px; height: 200px;background: #f1f2f2; flex-flow: column; justify-content: center; align-items: center; ">
-                <img src="./star.png" alt="star" width="70px" height="70px" style="margin-top: -100px;">
-                <div style="display: flex; flex-flow: column; justify-content: center; align-items: center; gap: 8px;">
-                    <h6 style=" font-size: medium; margin-bottom: 0px;">BRANDING</h6>
-                    <p style="width: 200px; margin: 0px; text-align: center; font-size: small; color: #bcbec0;">Lorem
-                        ipsum dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore .</p>
-                    <a href="#" style="color: #4fdf16;cursor: default;pointer-events: none;">read&nbsp;more</a>
+            <li>
+                <img src="./star.png" alt="star">
+                <div>
+                    <h6>BRANDING</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore.</p>
                 </div>
+                <a href="#">read&nbsp;more</a>
             </li>
-            <li
-                style="display: flex; width: 260px; border-radius: 10px; height: 200px;background: #f1f2f2; flex-flow: column; justify-content: center; align-items: center; ">
-                <img src="./star.png" alt="star" width="70px" height="70px" style="margin-top: -100px;">
-                <div style="display: flex; flex-flow: column; justify-content: center; align-items: center; gap: 8px;">
-                    <h6 style=" font-size: medium; margin-bottom: 0px;">MARKETING</h6>
-                    <p style="width: 200px; margin: 0px; text-align: center; font-size: small; color: #bcbec0;">Lorem
-                        ipsum dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore .</p>
-                    <a href="#" style="color: #4fdf16;cursor: default;pointer-events: none;">read&nbsp;more</a>
+            <li>
+                <img src="./star.png" alt="star">
+                <div>
+                    <h6>MARKETING</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore.</p>
                 </div>
+                <a href="#">read&nbsp;more</a>
             </li>
         </ul>
     </section>
     <!-- OUR PORTFOLIO -->
-    <section
+    <section class="new"
         style="height: 686px; padding: 65px; box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5); display: flex; flex-flow: column; justify-content: center;align-items: center; background: #212121; gap: 10px;">
         <h1 style="font-size: 6vh; margin: 0px; color: #fff;">OUR <span style="color: #668e19;">PORTFOLIO</span> </h1>
         <p style="width: 550px; margin: 0px; text-align: center; font-size: medium; color: #bcbec0;">Lorem ipsum dolor
@@ -378,29 +547,29 @@ border-bottom: 10px solid #fbbd08 ;
         </ul>
         <div>
             <div style="display: flex; gap: 0px;">
-                <img src="h1.png" alt="logo" width="216px" height="216px">
-                <img src="h2.png" alt="logo" width="216px" height="216px">
-                <img src="h3.png" alt="logo" width="216px" height="216px">
-                <img src="h4.png" alt="logo" width="216px" height="216px">
-                <img src="h5.png" alt="logo" width="216px" height="216px">
+                <img src="h1.png" alt="logo" width="20%" height="216px">
+                <img src="h2.png" alt="logo" width="20%" height="216px">
+                <img src="h3.png" alt="logo" width="20%" height="216px">
+                <img src="h4.png" alt="logo" width="20%" height="216px">
+                <img src="h5.png" alt="logo" width="20%" height="216px">
             </div>
             <div style="display: flex; gap: 0px;">
-                <img src="h6.png" alt="logo" width="216px" height="216px">
-                <img src="h7.png" alt="logo" width="216px" height="216px">
-                <img src="h8.png" alt="logo" width="216px" height="216px">
-                <img src="h9.png" alt="logo" width="216px" height="216px">
-                <img src="h10.png" alt="logo" width="216px" height="216px">
+                <img src="h6.png" alt="logo" width="20%" height="216px">
+                <img src="h7.png" alt="logo" width="20%" height="216px">
+                <img src="h8.png" alt="logo" width="20%" height="216px">
+                <img src="h9.png" alt="logo" width="20%" height="216px">
+                <img src="h10.png" alt="logo" width="20%" height="216px">
             </div>
         </div>
     </section>
     <!-- OUR PROCESS -->
-    <section
-        style=" padding-block: 30px; box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5); display: flex; flex-flow: column; justify-content: center;align-items: center; gap: 25px;">
+    <section class="new"
+        style="height: max-content;  padding-block: 60px; box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5); display: flex; flex-flow: column; justify-content: center; align-items: center; gap: 25px;">
         <h1 style="font-size: 6vh; margin: 0px;">OUR <span style="color: #668e19;">PROCESS</span> </h1>
         <p style="width: 550px; margin: 0px; text-align: center; font-size: medium; font-weight : 300; color: #bcbec0;">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde
             repudiandae illo erat.</p>
-        <img src="process.jpg" alt="process" width="1080px" style="margin-top: 15px;">
+        <img src="process.jpg" alt="process" width="100%" style="margin-top: 15px;">
         <ul style="display: flex; margin-top: -20px; gap: 40px;">
             <li style="display: flex; flex-flow: column; justify-content: center; align-items: center;">
                 <h6 style="padding :12px; font-size: medium; font-weight : 300; margin: 0px;">REQUEST CALL</h6>
@@ -434,24 +603,69 @@ border-bottom: 10px solid #fbbd08 ;
             </li>
         </ul>
     </section>
+    <!-- OUR PROCESS Small screens -->
+    <!-- <section class="resposive"
+        style="height: max-content; padding:30px ; box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5); display: flex; flex-flow: column; justify-content: center; align-items: center;">
+        <h1 style="font-size: 6vh; margin: 0px;">OUR <span style="color: #668e19;">PROCESS</span> </h1>
+        <div style="display: flex; flex-direction: row;  ">
+            <img src="processs.jpg" alt="process" width="30%" class="margin-bottom: 10px;">
+            <ul style="display: flex; gap: 0px;">
+                <li style="display: flex; flex-flow: column; justify-content: center; align-items: center;">
+                    <h6 style="padding :12px; font-size: medium; font-weight : 300; margin: 0px;">REQUEST CALL</h6>
+                    <p style="width: 140px; text-align: center; font-size: small; color: #bcbec0;">Lorem ipsum dolor sit
+                        amet, consectetur </p>
+                </li>
+                <li style="display: flex; flex-flow: column; justify-content: center; align-items: center;">
+                    <h6 style="padding :12px; font-size: medium; font-weight : 300; margin: 0px;">CONSULTATION</h6>
+                    <p style="width: 140px; text-align: center; font-size: small; color: #bcbec0;">Lorem ipsum dolor sit
+                        amet, consectetur </p>
+                </li>
+                <li style="display: flex; flex-flow: column; justify-content: center; align-items: center;">
+                    <h6 style="padding :12px; font-size: medium; font-weight : 300; margin: 0px;">PLANNING</h6>
+                    <p style="width: 140px; text-align: center; font-size: small; color: #bcbec0;">Lorem ipsum dolor sit
+                        amet, consectetur </p>
+                </li>
+                <li style="display: flex; flex-flow: column; justify-content: center; align-items: center;">
+                    <h6 style="padding :12px; font-size: medium; font-weight : 300; margin: 0px;">WORK PROCESS</h6>
+                    <p style="width: 140px; text-align: center; font-size: small; color: #bcbec0;">Lorem ipsum dolor sit
+                        amet, consectetur </p>
+                </li>
+                <li style="display: flex; flex-flow: column; justify-content: center; align-items: center;">
+                    <h6 style="padding :12px; font-size: medium; font-weight : 300; margin: 0px;">CORRECTING</h6>
+                    <p style="width: 140px; text-align: center; font-size: small; color: #bcbec0;">Lorem ipsum dolor sit
+                        amet, consectetur </p>
+                </li>
+                <li style="display: flex; flex-flow: column; justify-content: center; align-items: center;">
+                    <h6 style="padding :12px; font-size: medium; font-weight : 300; margin: 0px;">DELIVER</h6>
+                    <p style="width: 140px; text-align: center; font-size: small; color: #bcbec0;">Lorem ipsum dolor sit
+                        amet, consectetur </p>
+                </li>
+            </ul>
+        </div>
+    </section> -->
     <!-- PEOPLE ABOUT US -->
     <section
-        style="height: 504px; box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5); display: flex; flex-flow: column; justify-content: center; align-items: center; background: #f1f2f2; gap: 20px; ">
+        style="max-width: 100%; width: 100vw; overflow-x: hidden; height: max-content; padding-block: 30px ; box-shadow: 0px 4px 10px rgba(29, 26, 29, 0.5); display: flex; flex-flow: column; justify-content: center; align-items: center; background: #f1f2f2; gap: 20px; ">
         <h1 style="font-size: 6vh; margin: 0px;">PEOPLE <span style="color: #668e19;">ABOUT US</span> </h1>
-        <p style="width: 550px; margin: 0px; text-align: center; font-size: medium; color: #bcbec0;">Lorem ipsum dolor
+        <p class="ADVANTAGES" style="width: 550px; margin: 0px; text-align: center; font-size: medium; color: #bcbec0;">
+            Lorem ipsum dolor
             sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde repudiandae illo
             erat.</p>
+        <p class="responsive-text" style="width: 250px; text-align: center; margin-top: 10px; margin-bottom: 90px;">
+            Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde repudiandae
+            illo erat</p>
         <!-- 2left + 2right  = 4 -->
         <div style="display: flex;">
             <!--2left  -->
-            <div style="border-right: 2px solid #d1d3d4 ;">
+            <div class="boarder" style="border-right: 2px solid #d1d3d4 ;">
                 <div style="border-bottom: 2px solid #d1d3d4 ;">
                     <div
-                        style="display: flex; align-items: center; height: 135px; width: 500px; justify-content: space-around; margin-right: 70px; ">
+                        style="display: flex; align-items: center; height: 135px;  max-width: 500px; justify-content: space-around; margin-right: 70px; ">
                         <img src="pfp.png" alt="pfp">
                         <div>
                             <h4 style="font-weight:normal ; margin-bottom:18px; margin-top: 0%;">1JOHN DOE</h4>
-                            <p style="width: 343px; font-size: 14px; margin: 0px; ">Lorem ipsum dolor sit amet,
+                            <p class="four">Lorem ipsum dolor sit amet,
                                 consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde
                                 repudiandae illo illo erat.</p>
                         </div>
@@ -462,9 +676,9 @@ border-bottom: 10px solid #fbbd08 ;
                     <img src="pfp.png" alt="pfp">
                     <div>
                         <h4 style="font-weight:normal ; margin-bottom:18px; margin-top: 0%; ">JOHN DOE</h4>
-                        <p style="width: 343px; font-size: 14px; margin: 0px; ">Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde repudiandae illo illo
-                            erat.</p>
+                        <p class="four">Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde
+                            repudiandae illo illo erat.</p>
                     </div>
                 </div>
             </div>
@@ -476,7 +690,7 @@ border-bottom: 10px solid #fbbd08 ;
                         <img src="pfp.png" alt="pfp">
                         <div>
                             <h4 style="font-weight:normal ; margin-bottom:18px; margin-top: 0%;">1JOHN DOE</h4>
-                            <p style="width: 343px; font-size: 14px; margin: 0px; ">Lorem ipsum dolor sit amet,
+                            <p class="four">Lorem ipsum dolor sit amet,
                                 consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde
                                 repudiandae illo illo erat.</p>
                         </div>
@@ -487,9 +701,9 @@ border-bottom: 10px solid #fbbd08 ;
                     <img src="pfp.png" alt="pfp">
                     <div>
                         <h4 style="font-weight:normal ; margin-bottom:18px; margin-top: 0%; ">JOHN DOE</h4>
-                        <p style="width: 343px; font-size: 14px; margin: 0px; ">Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde repudiandae illo illo
-                            erat.</p>
+                        <p class="four">Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde
+                            repudiandae illo illo erat.</p>
                     </div>
                 </div>
             </div>
@@ -498,11 +712,16 @@ border-bottom: 10px solid #fbbd08 ;
     </section>
     <!-- OUR SKILLS -->
     <section
-        style="height: 455px; display: flex; flex-flow: column; justify-content: center; align-items: center;  gap: 30px; ">
+        style="height: max-content; padding-block: 30px;  display: flex; flex-flow: column; justify-content: center; align-items: center;  gap: 30px; ">
         <h1 style="font-size: 6vh; margin: 0px;">OUR <span style="color: #668e19;">SKILLS</span> </h1>
-        <p style="width: 550px; margin: 0px; text-align: center; font-size: medium; color: #bcbec0;">Lorem ipsum dolor
+        <p class="ADVANTAGES" style="width: 550px; margin: 0px; text-align: center; font-size: medium; color: #bcbec0;">
+            Lorem ipsum dolor
             sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde repudiandae illo
             erat.</p>
+        <p class="responsive-text" style="width: 250px; text-align: center; margin-top: 10px; margin-bottom: 90px;">
+            Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde repudiandae
+            illo erat</p>
         <div style="display: flex; gap: 50px;">
             <div><img src="./1 (1).png" alt="%"></div>
             <div style="display: flex; flex-flow: column; align-items: center;"><img src="./1 (2).png" alt="%">
@@ -517,7 +736,7 @@ border-bottom: 10px solid #fbbd08 ;
         </div>
     </section>
     <!-- START YOUR NEW PROJECT -->
-    <section
+    <section class="new"
         style="height: 320px; background: #8dc63f; color: #fff; display: flex; justify-content: center; flex-flow: column; align-items: center; gap: 40px;">
         <h1 style="font-size:  9vh;margin: 0;">START YOUR NEW PRO𝗝ECT</h1>
         <form style="display: flex; gap: 14px;">
@@ -530,15 +749,17 @@ border-bottom: 10px solid #fbbd08 ;
             <div><input type="text" placeholder="YOUR NUMBER"
                     style="border: none; border-radius: 8px; width: 226px; height: 42px; font-size: 16px; color: #dddedf; padding-left: 24px;" />
             </div>
-            <button type="submit"
-                style="padding: 10px 20px; border: none;  border-radius: 4px; box-shadow: 0px 4px 10px rgb(153, 138, 6); background-color: #FFC107; color: black; cursor: pointer; width: 181px; margin-left: 15px;">SEND
-                REQUEST</button>
+            <div type="submit"
+                style="padding-block: 10px ; padding-inline: 25px; border: none; text-wrap-mode: nowrap; text-align: center; border-radius: 4px; box-shadow: 0px 4px 10px rgb(153, 138, 6); background-color: #FFC107; color: black; cursor: pointer; width:130px; margin-left: 15px;">
+                SEND
+                REQUEST</div>
         </form>
-        <p style="width: 670px; margin: 0px; text-align: center; font-size: small; ">Lorem ipsum dolor sit amet,
+        <p style="width: 670px; margin: 0px; text-align: center; font-size: medium; ">Lorem ipsum dolor sit amet,
             consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde repudiandae illo erat.</p>
     </section>
     <!-- OUR CONTACTS -->
-    <section style="height: 253px; display: flex; justify-content: center; flex-flow: column; align-items: center;  ">
+    <section class="new"
+        style="height: 253px; margin-top: 30px; display: flex; justify-content: center; flex-flow: column; align-items: center;  ">
         <h1 style="font-size: 6vh; margin: 0px;">OUR <span style="color: #668e19;">CONTACTS</span> </h1>
         <p style="width: 550px; margin: 0px; text-align: center; font-size: medium; color: #bcbec0;">Lorem ipsum dolor
             sit amet, consectetur adipisicing elit. Et, voluptatem vel? Inventore neque, eos nam unde repudiandae illo
@@ -566,11 +787,12 @@ border-bottom: 10px solid #fbbd08 ;
     </section>
     <img src="./map.jpg" alt="map" height="352px" width="100%">
     <!-- footer -->
-    <footer style="height: 343px; background: #79a32b;">
+    <footer class="footer" style="height: 600px; background: #79a32b;">
         <div style="display: flex;  color: #fff; padding-top:57px; height: 280px;">
             <div style="padding-inline: 90px; ">
                 <img src="pc.png" alt="PanaCloud" width="141px" height="72px">
-                <p style="width: 215px; margin-top: 5px; margin-bottom: 65px;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p style="width: 215px; margin-top: 5px; margin-bottom: 65px;">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
                     Quaerat nihil natus iure ut labore repellendus. A eligendi iusto iusto iusto veritatis!</p>
                 <span>@PanaCloud 2019</span>
             </div>
@@ -602,7 +824,8 @@ border-bottom: 10px solid #fbbd08 ;
                     <li>Lorem Ipsum Dolor</li>
                 </ul>
             </div>
-            <div style="display: flex; flex-flow: column; text-align: left; font-size: larger; font-weight: 600; width: 250px; border-inline: 2px solid #8dc63f; gap:40px;  padding-inline: 60px">
+            <div
+                style="display: flex; flex-flow: column; text-align: left; font-size: larger; font-weight: 600; width: 250px; gap:40px;  padding-inline: 60px">
                 CONTACTS
                 <ul style="display: flex; flex-flow: column;  gap: 8px;  font-weight: 100; padding: 0;">
                     <li style="display: flex; gap: 8px;">
@@ -619,15 +842,16 @@ border-bottom: 10px solid #fbbd08 ;
                     </li>
                 </ul>
                 <div> FOLLOW US
-                <div style="display: flex;  gap: 8px; margin-top: 26px;">
-                    <img src="./f.png" alt="social media icon" width="25px" height="25px" />
-                    <img src="./tw.png" alt="social media icon" width="25px" height="25px" />
-                    <img src="./g+.png" alt="social media icon" width="25px" height="25px" />
-                    <img src="./t.png" alt="social media icon" width="25px" height="25px" />
+                    <div style="display: flex;  gap: 8px; margin-top: 26px;">
+                        <img src="./f.png" alt="social media icon" width="25px" height="25px" />
+                        <img src="./tw.png" alt="social media icon" width="25px" height="25px" />
+                        <img src="./g+.png" alt="social media icon" width="25px" height="25px" />
+                        <img src="./t.png" alt="social media icon" width="25px" height="25px" />
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
